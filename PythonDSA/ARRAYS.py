@@ -129,4 +129,97 @@ def question6(arr,size):
 
 
 
+#Q8 You are given an array of 0s and 1s in random order. 
+# Segregate 0s on left side and 1s on right side of the array [Basically you have to sort the array]. Traverse array only once. 
+
+# Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+# Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 
+
+def question8():
+    a=input()
+    a=a.split(",")
+    b=[]
+    for i in a:
+        b.append(int(i))
+    zero=[]
+    one=[]
+    for i in b:
+        if i==0:
+            zero.append(i)
+        else:
+            one.append(i)
+    zero.extend(one)
+
+    return zero
+
+
+#Q9 Given an array arr[] of n integers, construct a Product Array prod[] (of same size) such that prod[i] is equal to the product of all the elements of arr[] except arr[i]. Solve it without division operator in O(n) time.
+
+# Example : 
+
+# Input: arr[]  = {10, 3, 5, 6, 2}
+# Output: prod[]  = {180, 600, 360, 300, 900}
+# 3 * 5 * 6 * 2 product of other array 
+# elements except 10 is 180
+# 10 * 5 * 6 * 2 product of other array 
+# elements except 3 is 600
+# 10 * 3 * 6 * 2 product of other array 
+# elements except 5 is 360
+# 10 * 3 * 5 * 2 product of other array 
+# elements except 6 is 300
+# 10 * 3 * 6 * 5 product of other array 
+# elements except 2 is 900
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Q10 You are given an array of n+2 elements. All elements of the array are in range 1 to n. And all elements occur once except two numbers which occur twice. Find the two repeating numbers. 
+
+# Example:
+
+# Input: 
+# arr = [4, 2, 4, 5, 2, 3, 1] 
+# n = 5
+# Output:
+# 4 2
+# Explanation:
+# The above array has n + 2 = 7 elements with all elements occurring once except 2 and 4 which occur twice. So the output should be 4 2.
+
+
+
+
+
+
+
+#Q11 Given a sorted array of n distinct integers where each integer is in the range from 0 to m-1 and m > n. Find the smallest number that is missing from the array. 
+
+# Examples 
+
+# Input: {0, 1, 2, 6, 9}, n = 5, m = 10 
+# Output: 3
+
+# Input: {4, 5, 10, 11}, n = 4, m = 12 
+# Output: 0
+
+# Input: {0, 1, 2, 3}, n = 4, m = 5 
+# Output: 4
+
+# Input: {0, 1, 2, 3, 4, 5, 6, 7, 10}, n = 9, m = 11 
+# Output: 8
+a=[0, 1, 2, 6, 9]
+m=10
+for i in range(0,m):
+    if i not in a:
+        print(i)
+        break
+
 
