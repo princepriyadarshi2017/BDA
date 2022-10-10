@@ -75,3 +75,47 @@ def question3(arr, arr_size):
             return arr[i]
          
     return -1
+
+# Q4 There are two sorted arrays. First one is of size m+n containing only m elements. Another one is of size n and contains n elements. Merge these two arrays into the first array of size m+n such that the output is sorted. 
+# Input: array with m+n elements (mPlusN[])
+# NA => Value is not filled/available in array mPlusN[]. There should be n such array blocks.
+# Input: array with n elements (N[]). 
+
+
+
+# Q5 Given an array arr[] of size N, the task is to rotate the array by d position to the left.
+
+# Examples: 
+# Input:  arr[] = {1, 2, 3, 4, 5, 6, 7}, d = 2
+# Output: 3, 4, 5, 6, 7, 1, 2
+# Explanation: If the array is rotated by 1 position to the left, 
+# it becomes {2, 3, 4, 5, 6, 7, 1}.
+# When it is rotated further by 1 position,
+# it becomes: {3, 4, 5, 6, 7, 1, 2}
+# Input: arr[] = {1, 6, 7, 8}, d
+
+def question5():
+    a=input("input array:- ")
+    a=a.split(",")
+    c=input("input number of position to the rotated from left")
+    c=int(c)
+    e=[]
+    for i in a:
+        e.append(int(i))
+    d=[]
+    for i in range(c,len(e)):
+        d.append(e[i])
+    d.extend(e[0:c])
+
+    return d
+
+# Question 5 Write a program to print all the LEADERS in the array. An element is a leader 
+# if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
+# For example:
+
+# Input: arr[] = {16, 17, 4, 3, 5, 2}, 
+# Output: 17, 5, 2
+
+# Input: arr[] = {1, 2, 3, 4, 5, 2}, 
+# Output: 5, 2
+
