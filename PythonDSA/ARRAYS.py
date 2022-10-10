@@ -119,3 +119,14 @@ def question5():
 # Input: arr[] = {1, 2, 3, 4, 5, 2}, 
 # Output: 5, 2
 
+def question6(arr,size):    
+    for i in range(0, size):
+        for j in range(i+1, size):
+            if arr[i]<=arr[j]:
+                break
+        if j == size-1:
+            print (arr[i],end=' ')
+
+
+
+
