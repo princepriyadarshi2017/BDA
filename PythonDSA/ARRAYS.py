@@ -109,7 +109,7 @@ def question5():
 
     return d
 
-# Question 5 Write a program to print all the LEADERS in the array. An element is a leader 
+# Q6 Write a program to print all the LEADERS in the array. An element is a leader 
 # if it is greater than all the elements to its right side. And the rightmost element is always a leader. 
 # For example:
 
