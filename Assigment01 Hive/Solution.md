@@ -101,40 +101,40 @@ from sales_order_data_csv insert overwrite table sales_order_orc select *;
 ```
 select year_id, sum(sales) as total_sales from sales_order_orc group by year_id;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/q1.PNG)
 
 
 #### 2. Find a product for which maximum orders were placed
 ```
 select PRODUCTLINE, SUM(QUANTITYORDERED) AS total_orders FROM sales_order_orc group by PRODUCTLINE ORDER BY total_orders desc LIMIT 1;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/query2.PNG)
 
 
 #### 3. Calculate the total sales for each quarter
 ```
 select YEAR_ID as year, QTR_ID as Quarter, sum(SALES) as sale_in_quarter from sales_order_orc GROUP BY YEAR_ID,QTR_ID ;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/QUERY3.PNG)
 
 
 #### 4. In which quarter sales was minimum
 ```
 select YEAR_ID as year, QTR_ID as Quarter, sum(SALES) as min_sales_qtr from sales_order_orc GROUP BY YEAR_ID,QTR_ID ORDER BY min_sales_qtr limit 1 ;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/q4.PNG)
 
 #### 5. In which country sales was maximum and in which country sales was minimum
 ```
 select COUNTRY, sum(SALES) as total_sales from sales_order_orc group by COUNTRY order by total_sales asc limit 1 union all select COUNTRY, sum(SALES) as total_sales from sales_order_orc group by COUNTRY order by total_sales desc limit 1;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/Q5.PNG)
 
 #### 6.  Calculate quartelry sales for each city
 ```
 select CITY,YEAR_ID, QTR_ID,SUM(SALES) FROM sales_order_orc group by CITY,YEAR_ID, QTR_ID;
 ```
-![alt text]()
+![alt text](https://github.com/princepriyadarshi2017/BDA/blob/master/Assigment01%20Hive/Screenshots/q6.PNG)
 
 
 #### 7.  Find a month for each year in which maximum number of quantities were sold
