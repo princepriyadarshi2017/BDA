@@ -71,3 +71,8 @@ def permute(a, l, r):
             a[l], a[i] = a[i], a[l] 
             permute(a, l+1, r) 
             a[l], a[i] = a[i], a[l] 
+
+# # Reverse words in a given string
+# Input: s = “geeks quiz practice code” 
+# Output: s = “code practice quiz geeks”
+
